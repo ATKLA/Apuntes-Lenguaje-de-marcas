@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Apuntes de lenguaje de marcas</title>
+    <meta name="description" content="Esto es una página de ejemplo">
+    <meta name="keywords" content="uax, fp online uax, uax online, apuntes, lenguaje de marcas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Apuntes de Lenguaje de marcas</h1>
+    <hr>
+    <div class="code-header">
+        <h2>Ejemplo XML - Menú semanal</h2>
+    </div>
+    <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Menu de lunes a viernes por 13€ con el pan, vino o cafe incluido --&gt;
+&lt;menus&gt;
+    &lt;dia nombre="Lunes"&gt;
+        &lt;primerPlato&gt;Ejemplo de primer plato&lt;/primerPlato&gt;
+        &lt;segundoPlato&gt;Ejemplo de segundo plato&lt;/segundoPlato&gt;
+        &lt;extras&gt;
+            &lt;pan&gt;true&lt;/pan&gt;
+            &lt;bebida&gt;vino o café&lt;/bebida&gt;
+        &lt;/extras&gt;
+        &lt;precio&gt;13&lt;/precio&gt;
+    &lt;/dia&gt;
+    &lt;dia nombre="Martes"&gt;
+        &lt;primerPlato&gt;Ejemplo de primer plato&lt;/primerPlato&gt;
+        &lt;segundoPlato&gt;Ejemplo de segundo plato&lt;/segundoPlato&gt;
+        &lt;extras&gt;
+            &lt;pan&gt;true&lt;/pan&gt;
+            &lt;bebida&gt;vino o café&lt;/bebida&gt;
+        &lt;/extras&gt;
+        &lt;precio&gt;13&lt;/precio&gt;
+    &lt;/dia&gt;
+    &lt;dia nombre="Miércoles"&gt;
+        &lt;primerPlato&gt;Ejemplo de primer plato&lt;/primerPlato&gt;
+        &lt;segundoPlato&gt;Ejemplo de segundo plato&lt;/segundoPlato&gt;
+        &lt;extras&gt;
+            &lt;pan&gt;true&lt;/pan&gt;
+            &lt;bebida&gt;vino o café&lt;/bebida&gt;
+        &lt;/extras&gt;
+        &lt;precio&gt;13&lt;/precio&gt;
+    &lt;/dia&gt;
+    &lt;dia nombre="Jueves"&gt;
+        &lt;primerPlato&gt;Ejemplo de primer plato&lt;/primerPlato&gt;
+        &lt;segundoPlato&gt;Ejemplo de segundo plato&lt;/segundoPlato&gt;
+        &lt;extras&gt;
+            &lt;pan&gt;true&lt;/pan&gt;
+            &lt;bebida&gt;vino o café&lt;/bebida&gt;
+        &lt;/extras&gt;
+        &lt;precio&gt;13&lt;/precio&gt;
+    &lt;/dia&gt;
+    &lt;dia nombre="Viernes"&gt;
+        &lt;primerPlato&gt;Ejemplo de primer plato&lt;/primerPlato&gt;
+        &lt;segundoPlato&gt;Ejemplo de segundo plato&lt;/segundoPlato&gt;
+        &lt;extras&gt;
+            &lt;pan&gt;true&lt;/pan&gt;
+            &lt;bebida&gt;vino o café&lt;/bebida&gt;
+        &lt;/extras&gt;
+        &lt;precio&gt;13&lt;/precio&gt;
+    &lt;/dia&gt;
+&lt;/menus&gt;</code></pre>
+    </div>
+    <div class="code-header">
+        <h2>Ejemplo XML - Feed RSS</h2>
+    </div>
+    <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;rss version="2.0"&gt;
+    &lt;channel&gt;
+        &lt;title&gt;Canal de Noticias Deportivas&lt;/title&gt;
+        &lt;link&gt;http://www.ejemplo.com/deportes&lt;/link&gt;
+        &lt;description&gt;Últimas noticias deportivas&lt;/description&gt;
+        &lt;language&gt;es-es&lt;/language&gt;
+        &lt;item&gt;
+            &lt;title&gt;Equipo A gana el campeonato&lt;/title&gt;
+            &lt;link&gt;http://www.ejemplo.com/deportes/equipo-a-campeon&lt;/link&gt;
+            &lt;description&gt;El equipo A logra vencer en la final y se corona campeón.&lt;/description&gt;
+            &lt;pubDate&gt;Sun, 09 May 2025 12:00:00 +0000&lt;/pubDate&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+            &lt;title&gt;Jugadores destacados en la liga&lt;/title&gt;
+            &lt;link&gt;http://www.ejemplo.com/deportes/jugadores-destacados&lt;/link&gt;
+            &lt;description&gt;Resumen de los jugadores que han tenido un rendimiento sobresaliente esta temporada.&lt;/description&gt;
+            &lt;pubDate&gt;Sun, 09 May 2025 14:00:00 +0000&lt;/pubDate&gt;
+        &lt;/item&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt;</code></pre>
+    </div>
+    </div>
+    <div class="code-header">
+        <h2>Ejemplo completo de página HTML</h2>
+    </div>
+    </div>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Ejemplo completo de página HTML&lt;/title&gt;
+    &lt;meta name="description" content="Esto es una página de ejemplo"&gt;
+    &lt;meta name="keywords" content="uax, fp online uax, uax online"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="estilos.css" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1 class="clase2"&gt;Mi Página de Ejemplo&lt;/h1&gt;
+    &lt;hr&gt;
+    &lt;div class="clase2"&gt;
+        &lt;img src="logo-uax-azul.jpg" class="clase2 bordes_blancos bordes_redondeados"&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;Descripción&lt;/h2&gt;
+
+    &lt;p&gt;Esta página muestra diferentes elementos HTML, incluyendo encabezados, párrafos, tablas, enlaces, listas y una
+        imagen.&lt;/p&gt;
+
+    &lt;p class="clase1 clase2"&gt;Es un ejemplo de cómo estructurar contenidos en una página web.&lt;/p&gt;
+
+    &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.&lt;/p&gt;
+
+    &lt;!-- Lista Numerada --&gt;
+
+    &lt;h2&gt;Pasos para comprar&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Selecciona el producto que deseas.&lt;/li&gt;
+        &lt;li&gt;Agrega al carrito.&lt;/li&gt;
+        &lt;li&gt;Procede a la compra.&lt;/li&gt;
+        &lt;li&gt;Introduce tus datos y confirma el pedido.&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;hr&gt;
+
+    &lt;!-- Para poder centrar las imágenes las incluimos en un contenedor vacio DIV y aplicamos el centrado al contenedor, en rrealidad, afecta a lo de dentro del contenedor --&gt;
+
+&lt;div class="clase2"&gt;
+    &lt;img src="img/logo-uax-azul.jpg" alt="Imagen de ejemplo" width="100px" /&gt;
+    &lt;img src="img/logo-uax-azul.jpg" alt="Imagen de ejemplo" width="150px" class="redondas bordes_blancos" /&gt;
+    &lt;img src="img/logo-uax-azul.jpg" alt="Imagen de ejemplo" width="100px" /&gt;
+&lt;/div&gt;
+    &lt;hr&gt;
+
+    &lt;h2&gt;Tabla de Información&lt;/h2&gt;
+    &lt;!-- Tabla --&gt;
+    &lt;table class="bordered"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Producto&lt;/th&gt;
+            &lt;th&gt;Precio&lt;/th&gt;
+            &lt;th&gt;Disponibilidad&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Libro&lt;/td&gt;
+            &lt;td&gt;15 €&lt;/td&gt;
+            &lt;td&gt;En stock&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Planificador&lt;/td&gt;
+            &lt;td&gt;7 €&lt;/td&gt;
+            &lt;td&gt;Agotado&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;!-- Enlaces dentro de una lista sin numerar--&gt;
+    &lt;h2&gt;Enlaces útiles&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.wikipedia.org" target="_blank"&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.ejemplo.com" target="_blank"&gt;Página de ejemplo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.openai.com" target="_blank"&gt;OpenAI&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+    </div>
+    
+    <div class="code-header"><h2>Ejemplo de CSS completo</h2></div>
+    <pre><code class="language-css">/* Selectores de tipo */
+* {
+    font-family: arial, sans-serif;
+    font-size: 100%;
+    line-height: 100%;
+    color: black;
+    background: grey;
+}
+
+body {
+    margin: 100px;
+    border: dashed 1px white;
+    padding: 20px;
+}
+
+h1 {
+    color: navy;
+    font-size: 2rem;
+}
+
+img {
+    margin: 20px;
+}
+
+h2 {
+    color: darkred;
+    font-size: 1.5rem;
+    background: white;
+    padding: 10px;
+    border-left: 10px solid darkred;
+}
+
+h1,
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    line-height: 2rem;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    background: #bfbebe;
+}
+
+td,
+th {
+    padding: 8px;
+    border: solid 1px black;
+}
+
+li {
+    line-height: 30px;
+    margin-left: 30px
+}
+
+/* Clases */
+.clase1 {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: 900;
+}
+
+.clase2 {
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+.bordes_redondeados {
+    border-radius: 20px;
+}
+
+.redondas {
+    border-radius: 100%;
+}
+
+.bordes_blancos {
+    border: 4px solid white;
+}</code></pre>
+    </div>
+</body>

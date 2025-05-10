@@ -1,0 +1,94 @@
+/* estilos.css - Versión mejorada para aprovechar espacio */
+
+:root {
+  --color-primario: #8301ab;
+  --color-secundario: #f7de42;
+  --color-fondo: #fbd428;
+  --color-texto: #1e293b;
+  --color-borde: #030406;
+}
+h1 {
+    text-align: center;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Contenedores de código mejorados */
+.code-container {
+  margin: 2rem 0;
+  border-radius: 1rem;
+  overflow: visible; /* Cambiado de hidden a visible */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.code-header {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 500;
+}
+
+/* Bloques de código - versión expandida */
+pre[class*="language-"] {
+  margin: 0 !important;
+  border-radius: 0 0 0.5rem 0.5rem !important;
+  background: #f5f7fa !important;
+  border: 1px solid var(--color-borde) !important;
+  white-space: pre-wrap; /* Permite que el código se ajuste */
+  word-wrap: break-word;
+  overflow-x: auto; /* Solo scroll horizontal si es necesario */
+  max-width: 100%;
+}
+
+code[class*="language-"] {
+  display: block;
+  padding: 1.5rem !important;
+  font-family: 'Fira Code', monospace !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  background: transparent !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  pre[class*="language-"] {
+    padding: 1rem !important;
+  }
+}
+
+/* Mejoras para el resaltado de sintaxis */
+.token.comment,
+.token.prolog {
+  color: #64748b !important;
+  font-style: italic !important;
+}
+
+.token.tag {
+  color: #2563eb !important;
+}
+
+.token.attr-name {
+  color: #059669 !important;
+}
+
+.token.attr-value {
+  color: #d97706 !important;
+}
+
+.token.punctuation {
+  color: #94a3b8 !important;
+}
