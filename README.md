@@ -1,1 +1,1 @@
-(banner_apuntes.png)
+![Banner principal](banner_apuntes.png)  
