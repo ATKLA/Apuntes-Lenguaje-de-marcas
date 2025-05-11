@@ -1,16 +1,13 @@
-/* estilos.css - Versión mejorada para aprovechar espacio */
-
 :root {
   --color-primario: #8301ab;
   --color-secundario: #f7de42;
   --color-fondo: #fbd428;
   --color-texto: #1e293b;
   --color-borde: #030406;
-}
-h1 {
-    text-align: center;
+  --color-destacado: #e63946;
 }
 
+/* Estilos base */
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -21,32 +18,55 @@ body {
   padding: 2rem;
 }
 
-/* Contenedores de código mejorados */
+h1 {
+  text-align: center;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.header-divider {
+  border: 2px solid var(--color-primario);
+  margin: 1.5rem 0;
+  opacity: 0.7;
+}
+
+/* Contenedores de código */
 .code-container {
   margin: 2rem 0;
   border-radius: 1rem;
-  overflow: visible; /* Cambiado de hidden a visible */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   background: white;
 }
 
 .code-header {
   background-color: var(--color-primario);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem 0.5rem 0 0;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
-/* Bloques de código - versión expandida */
+.code-header h2 {
+  margin: 0;
+  color: white;
+  background: transparent;
+  border-left: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Bloques de código */
 pre[class*="language-"] {
   margin: 0 !important;
   border-radius: 0 0 0.5rem 0.5rem !important;
   background: #f5f7fa !important;
   border: 1px solid var(--color-borde) !important;
-  white-space: pre-wrap; /* Permite que el código se ajuste */
+  white-space: pre-wrap;
   word-wrap: break-word;
-  overflow-x: auto; /* Solo scroll horizontal si es necesario */
+  overflow-x: auto;
   max-width: 100%;
 }
 
@@ -59,14 +79,99 @@ code[class*="language-"] {
   background: transparent !important;
 }
 
-/* Ajustes responsivos */
+/* Tabla del glosario */
+.table-container {
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.glossary-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin: 0;
+}
+
+.glossary-table td {
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.glossary-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.glossary-table strong {
+  color: var(--color-primario);
+}
+
+.glossary-table input,
+.glossary-table select,
+.glossary-table button {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  color: var(--color-texto);
+  border-top: 2px solid var(--color-primario);
+  font-size: 0.9rem;
+  background: white;
+  border-radius: 0.5rem;
+}
+
+/* Elementos interactivos */
+input, select, button {
+  padding: 6px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  margin: 2px;
+}
+
+button {
+  background-color: var(--color-primario);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+button:hover {
+  background-color: #6a0190;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
   }
   
+  .code-container {
+    margin: 1rem 0;
+  }
+  
   pre[class*="language-"] {
     padding: 1rem !important;
+  }
+  
+  .glossary-table td {
+    padding: 8px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .glossary-table tr {
+    margin-bottom: 1rem;
+    display: block;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
 }
 

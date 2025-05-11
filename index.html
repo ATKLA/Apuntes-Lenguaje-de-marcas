@@ -18,11 +18,15 @@
 
 <body>
     <h1>Apuntes de Lenguaje de marcas</h1>
-    <hr>
-    <div class="code-header">
-        <h2>Ejemplo XML - Menú semanal</h2>
-    </div>
-    <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    <hr class="header-divider">
+    <br>
+
+    <!-- Ejemplo XML - Menú semanal -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>Ejemplo XML - Menú semanal</h2>
+        </div>
+        <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!-- Menu de lunes a viernes por 13€ con el pan, vino o cafe incluido --&gt;
 &lt;menus&gt;
     &lt;dia nombre="Lunes"&gt;
@@ -71,11 +75,14 @@
         &lt;precio&gt;13&lt;/precio&gt;
     &lt;/dia&gt;
 &lt;/menus&gt;</code></pre>
-    </div>
-    <div class="code-header">
-        <h2>Ejemplo XML - Feed RSS</h2>
-    </div>
-    <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+    </section>
+
+    <!-- Ejemplo XML - Feed RSS -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>Ejemplo XML - Feed RSS</h2>
+        </div>
+        <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 &lt;rss version="2.0"&gt;
     &lt;channel&gt;
         &lt;title&gt;Canal de Noticias Deportivas&lt;/title&gt;
@@ -96,13 +103,14 @@
         &lt;/item&gt;
     &lt;/channel&gt;
 &lt;/rss&gt;</code></pre>
-    </div>
-    </div>
-    <div class="code-header">
-        <h2>Ejemplo completo de página HTML</h2>
-    </div>
-    </div>
-    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+    </section>
+
+    <!-- Ejemplo completo de página HTML -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>Ejemplo completo de página HTML</h2>
+        </div>
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
 
 &lt;head&gt;
@@ -185,10 +193,14 @@
 &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
-    </div>
-    
-    <div class="code-header"><h2>Ejemplo de CSS completo</h2></div>
-    <pre><code class="language-css">/* Selectores de tipo */
+    </section>
+
+    <!-- Ejemplo de CSS completo -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>Ejemplo de CSS completo</h2>
+        </div>
+        <pre><code class="language-css">/* Selectores de tipo */
 * {
     font-family: arial, sans-serif;
     font-size: 100%;
@@ -280,5 +292,81 @@ a {
 .bordes_blancos {
     border: 4px solid white;
 }</code></pre>
-    </div>
+    </section>
+
+    <!-- Glosario -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>GLOSARIO</h2>
+        </div>
+        <div class="table-container">
+            <table class="glossary-table">
+                <tr>
+                    <td><strong>hr:</strong>salto de línea pintada</td>
+                    <td><strong>br:</strong>salto de línea</td>
+                    <td><strong>strong:</strong>negrita</td>
+                    <td><strong>em:</strong>cursiva</td>
+                </tr>
+                <tr>
+                    <td><strong>p:</strong>párrafo</td>
+                    <td><strong>h1 a h6:</strong>encabezados de mayor a menor</td>
+                    <td><strong>a + href:</strong>añadir enlace</td>
+                    <td><strong>p + lorem:</strong>párrafo de prueba</td>
+                </tr>
+                <tr>
+                    <td><strong>tr:</strong>filas</td>
+                    <td><strong>th:</strong>celdas de cabecera</td>
+                    <td><strong>td:</strong>celda de datos</td>
+                    <td><strong>width:</strong>ancho</td>
+                </tr>
+                <tr>
+                    <td><strong>border:</strong>borde de la tabla</td>
+                    <td><strong>colspan + nº de celdas:</strong>unifica celdas</td>
+                    <td><strong>cellpadding:</strong>pixeles de separación interna de la celda</td>
+                    <td><strong>align:</strong>alineación</td>
+                </tr>
+                <tr>
+                    <td><strong>ol:</strong>listas ordenadas</td>
+                    <td><strong>ul:</strong>listas sin orden</td>
+                    <td><strong>li:</strong>elemento de la lista</td>
+                    <td><strong>form:</strong>formulario</td>
+                </tr>
+                <tr>
+                    <td><strong>input + type="text":</strong>introduce texto<input type="text"></td>
+                    <td><strong>input + type="radio":</strong>marca una opción<input type="radio"></td>
+                    <td><strong>input + type="checkbox":</strong>casilla de verificación<input type="checkbox"></td>
+                    <td><strong>input + type="date":</strong>seleccionar fecha<input type="date"></td>
+                </tr>
+                <tr>
+                    <td><strong>select:</strong>desplegable
+                        <select>
+                            <option value="A">Opción A</option>
+                            <option value="B">Opción B</option>
+                        </select>
+                    </td>
+                    <td><strong>datalist:</strong>
+                        <input type="text" list="Meses">
+                        <datalist id="Meses">
+                            <option value="Enero"></option>
+                            <option value="Febrero"></option>
+                        </datalist>
+                    </td>
+                    <td><strong>button:</strong><button>Aceptar</button></td>
+                    <td><strong>img src:</strong>añade una imagen</td>
+                </tr>
+                <tr>
+                    <td><strong>cols:</strong>columnas</td>
+                    <td><strong>div:</strong>contenedor</td>
+                    <td><strong>&lt;!--:</strong>comentario en html</td>
+                    <td><strong>/* */:</strong>comentario en css</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        Apuntes de "Lenguaje de marcas" by ATKLA.
+    </footer>
 </body>
+
+</html>
