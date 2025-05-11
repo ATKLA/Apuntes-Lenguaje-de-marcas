@@ -1,1 +1,1 @@
-(banner-apuntes.png)
+(banner_apuntes.png)
