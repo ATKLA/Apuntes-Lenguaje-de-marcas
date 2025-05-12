@@ -104,6 +104,105 @@
     &lt;/channel&gt;
 &lt;/rss&gt;</code></pre>
     </section>
+    <!-- DTD y XSD -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>DTD y XSD: Definición de Esquemas XML</h2>
+        </div>
+
+        <h3 style="margin:25px;">1. Ejemplo de DTD (Document Type Definition)</h3>
+        <pre><code class="language-xml">&lt;!DOCTYPE biblioteca [
+  &lt;!ELEMENT biblioteca (libro+)&gt;
+  &lt;!ELEMENT libro (titulo, autor, año, precio)&gt;
+  &lt;!ELEMENT titulo (#PCDATA)&gt;
+  &lt;!ELEMENT autor (#PCDATA)&gt;
+  &lt;!ELEMENT año (#PCDATA)&gt;
+  &lt;!ELEMENT precio (#PCDATA)&gt;
+  &lt;!ATTLIST libro idioma CDATA #IMPLIED&gt;
+]&gt;</code></pre>
+        <p style="margin:25px;"><strong>Puntos clave de DTD:</strong></p>
+        <ul style="margin:25px;">
+            <li><strong>Sintaxis simple</strong> basada en declaraciones <code>&lt;!ELEMENT&gt;</code> y
+                <code>&lt;!ATTLIST&gt;</code>.</li>
+            <li><strong>Tipos de datos limitados</strong>: Solo <code>#PCDATA</code> (texto) o elementos anidados.</li>
+            <li><strong>No soporta namespaces</strong> (espacios de nombres XML).</li>
+            <li><strong>Definición inline</strong> (dentro del XML) o externa (archivo <code>.dtd</code>).</li>
+        </ul>
+
+        <h3 style="margin:25px;">2. Ejemplo de XSD (XML Schema Definition)</h3>
+        <pre><code class="language-xml">&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="biblioteca"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="libro" maxOccurs="unbounded"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="titulo" type="xs:string"/&gt;
+              &lt;xs:element name="autor" type="xs:string"/&gt;
+              &lt;xs:element name="año" type="xs:integer"/&gt;
+              &lt;xs:element name="precio" type="xs:decimal"/&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:attribute name="idioma" type="xs:string" use="optional"/&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+        <p style="margin:25px;"><strong>Puntos clave de XSD:</strong></p>
+        <ul style="margin:25px;">
+            <li><strong>Sintaxis XML</strong>: Se escribe en formato XML (a diferencia de DTD).</li>
+            <li><strong>Tipos de datos avanzados</strong>: <code>string</code>, <code>integer</code>,
+                <code>decimal</code>, <code>date</code>, etc.</li>
+            <li><strong>Soporta namespaces</strong> y validación de estructuras complejas.</li>
+            <li><strong>Restricciones flexibles</strong>: <code>minOccurs</code>, <code>maxOccurs</code>,
+                <code>pattern</code>, etc.</li>
+        </ul>
+
+        <h3 style="margin:25px;">Diferencias entre DTD y XSD</h3>
+        <div class="table-container">
+            <table class="glossary-table">
+                <tr>
+                    <th>Característica</th>
+                    <th>DTD</th>
+                    <th>XSD</th>
+                </tr>
+                <tr>
+                    <td><strong>Formato</strong></td>
+                    <td>Sintaxis propia (no XML)</td>
+                    <td>XML (esquema válido)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tipos de datos</strong></td>
+                    <td>Solo <code>#PCDATA</code></td>
+                    <td>Strings, números, fechas, etc.</td>
+                </tr>
+                <tr>
+                    <td><strong>Namespaces</strong></td>
+                    <td>No soportados</td>
+                    <td>Soporte completo</td>
+                </tr>
+                <tr>
+                    <td><strong>Extensibilidad</strong></td>
+                    <td>Limitada</td>
+                    <td>Alta (herencia, grupos, etc.)</td>
+                </tr>
+                <tr>
+                    <td><strong>Validación avanzada</strong></td>
+                    <td>No</td>
+                    <td>Sí (rangos, patrones, etc.)</td>
+                </tr>
+                <tr>
+                    <td><strong>Uso moderno</strong></td>
+                    <td>En desuso (legacy)</td>
+                    <td>Estándar actual</td>
+                </tr>
+            </table>
+        </div>
+
+        <p style="margin:25px;">DTD se usa principalmente en proyectos legacy o sistemas simples, mientras que XSD es el estándar actual para
+            sistemas que requieren validación estricta de datos XML.</p>
+    </section>
 
     <!-- Ejemplo completo de página HTML -->
     <section class="code-container">
@@ -438,7 +537,8 @@ a {
             </table>
         </div>
 
-        <p style="margin:25px;">XPath es esencialmente un subconjunto de XQuery - cualquier expresión XPath válida también es válida en
+        <p style="margin:25px;">XPath es esencialmente un subconjunto de XQuery - cualquier expresión XPath válida
+            también es válida en
             XQuery. XQuery añade capacidades de consulta más potentes, incluyendo construcciones FLWOR
             (FOR-LET-WHERE-ORDER BY-RETURN) y la capacidad de crear nuevos documentos XML.</p>
     </section>
