@@ -363,7 +363,85 @@ a {
             </table>
         </div>
     </section>
+    <!-- XPath y XQuery -->
+    <section class="code-container">
+        <div class="code-header">
+            <h2>XPATH y XQUERY</h2>
+        </div>
 
+        <h3 style="margin:25px;">Ejemplo de XPath</h3>
+        <pre><code class="language-xml">
+        //libro[precio > 30 and año > 2000]/titulo/text()</code></pre>
+        <p style="margin:25px;">Este ejemplo de XPath:</p>
+        <ul style="margin:25px;">
+            <li>Busca todos los elementos <code>libro</code> donde el precio sea mayor que 30 y el año sea posterior a
+                2000</li>
+            <li>Luego selecciona el texto de sus elementos <code>titulo</code></li>
+        </ul>
+
+        <h3 style="margin:25px;">Ejemplo de XQuery</h3>
+        <pre><code class="language-xml" >
+        for $libro in doc("biblioteca.xml")//libro
+        where $libro/precio > 30 and $libro/año > 2000
+        order by $libro/titulo
+        return &lt;libro-caro&gt;{$libro/titulo/text()}&lt;/libro-caro&gt;</code></pre>
+        <p style="margin:25px;">Este ejemplo de XQuery:</p>
+        <ul style="margin:25px;">
+            <li>Busca los mismos libros que el ejemplo XPath</li>
+            <li>Los ordena por título</li>
+            <li>Devuelve los títulos dentro de un nuevo elemento <code>libro-caro</code></li>
+        </ul>
+
+        <h3 style="margin:25px;">Diferencias principales</h3>
+        <div class="table-container">
+            <table class="glossary-table">
+                <tr>
+                    <th>Característica</th>
+                    <th>XPath</th>
+                    <th>XQuery</th>
+                </tr>
+                <tr>
+                    <td><strong>Propósito</strong></td>
+                    <td>Navegación y selección</td>
+                    <td>Consulta y transformación</td>
+                </tr>
+                <tr>
+                    <td><strong>Complejidad</strong></td>
+                    <td>Más simple</td>
+                    <td>Más completo y complejo</td>
+                </tr>
+                <tr>
+                    <td><strong>Capacidad de consulta</strong></td>
+                    <td>Solo selección</td>
+                    <td>Selección, filtrado, ordenación, construcción de nuevos nodos</td>
+                </tr>
+                <tr>
+                    <td><strong>Estructura</strong></td>
+                    <td>Expresión única</td>
+                    <td>Puede contener múltiples expresiones con lógica compleja</td>
+                </tr>
+                <tr>
+                    <td><strong>Resultados</strong></td>
+                    <td>Retorna nodos o valores</td>
+                    <td>Puede retornar nodos, valores o documentos XML completos</td>
+                </tr>
+                <tr>
+                    <td><strong>Clausulas</strong></td>
+                    <td>No tiene cláusulas</td>
+                    <td>Tiene cláusulas como FOR, LET, WHERE, ORDER BY, RETURN</td>
+                </tr>
+                <tr>
+                    <td><strong>Uso típico</strong></td>
+                    <td>Dentro de otros lenguajes</td>
+                    <td>Como lenguaje independiente</td>
+                </tr>
+            </table>
+        </div>
+
+        <p style="margin:25px;">XPath es esencialmente un subconjunto de XQuery - cualquier expresión XPath válida también es válida en
+            XQuery. XQuery añade capacidades de consulta más potentes, incluyendo construcciones FLWOR
+            (FOR-LET-WHERE-ORDER BY-RETURN) y la capacidad de crear nuevos documentos XML.</p>
+    </section>
     <footer class="page-footer">
         Apuntes de "Lenguaje de marcas" by ATKLA.
     </footer>
